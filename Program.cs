@@ -115,7 +115,7 @@ namespace Lab7
             rationalNumber1.Print();
             Console.WriteLine(rationalNumber2.ToString());
             int intValue = rationalNumber1;
-            double doubleValue = rationalNumber2;
+            double doubleValue = (double)rationalNumber2;
 
             Console.WriteLine("Целая часть первого числа(int): " + intValue);
             Console.WriteLine("Целое часть второго числа(double): " + doubleValue);
