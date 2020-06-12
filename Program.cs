@@ -52,7 +52,7 @@ namespace Lab7
 
             public static explicit operator double(RationalNumber rationalNumber)
             {
-                return rationalNumber.N / rationalNumber.M;
+                return (double)rationalNumber.N / (double)rationalNumber.M;
             }
 
             public static RationalNumber operator +(RationalNumber rationalNumber1, RationalNumber rationalNumber2)
@@ -90,7 +90,11 @@ namespace Lab7
             public int CompareTo(object obj)
             {
                 RationalNumber rationalNum = obj as RationalNumber;
-                return (this.N / this.M).CompareTo(rationalNum.N / rationalNum.M);
+                if ((this.N * rationalNum.M) < (rationalNum.N * this.M))
+                    return -1;
+                if ((this.N * rationalNum.M) > (rationalNum.N * this.M))
+                    return 1;
+                else return 0; 
             }
 
             public static bool operator <(RationalNumber rationalNumber1, RationalNumber rationalNumber2)
