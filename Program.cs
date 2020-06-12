@@ -13,16 +13,19 @@ namespace Lab7
             private int N;
             private int M;
             public char[] sep = { ' ', '/', ':' };
+            
             public RationalNumber()
             {
                 N = 0;
                 M = 0;
             }
+            
             public RationalNumber(int n, int m)
             {
                 N = n;
                 M = m;
             }
+            
             public RationalNumber(string s)
             {
                 s = s.Trim();
@@ -94,14 +97,17 @@ namespace Lab7
             {
                 return rationalNumber1.CompareTo(rationalNumber2) < 0;
             }
+            
             public static bool operator >(RationalNumber rationalNumber1, RationalNumber rationalNumber2)
             {
                 return rationalNumber1.CompareTo(rationalNumber2) > 0;
             }
+            
             public static bool operator !=(RationalNumber rationalNumber1, RationalNumber rationalNumber2)
             {
                 return rationalNumber1.CompareTo(rationalNumber2) != 0;
             }
+            
             public static bool operator ==(RationalNumber rationalNumber1, RationalNumber rationalNumber2)
             {
                 return rationalNumber1.CompareTo(rationalNumber2) == 0;
